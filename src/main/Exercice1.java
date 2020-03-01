@@ -3,13 +3,14 @@ public class Exercice1 {
     }
 
     public int[] racine(int A, int B) {
-        int dim = B - A + 2;
+        int dim = B - A + 1;
         int[] res = new int[dim];
+
         if (A < B) {
-            for(int i = 0; i < dim; ++i) {
-                for(int j = A; j <= B; ++j) {
-                    res[i] = (int)Math.floor(Math.sqrt((double)j));
-                }
+            for(int j = A; j <= B; j++) {
+                res[j-1] = (int) Math.floor(Math.sqrt((double) j));
+
+
             }
         }
 
